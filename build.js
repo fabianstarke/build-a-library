@@ -18,7 +18,10 @@ class Media {
   }
 
   getAverageRating(){
+    const lengthOfArray = this._ratings.length;
+    let ratingsSum = this._ratings.reduce((currentSum, rating) =>currentSum + rating, 0);
 
+    return ratingsSum/lengthOfArray;
   }
 
   toggleCheckedOutStatus(){
